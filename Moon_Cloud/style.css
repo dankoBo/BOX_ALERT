@@ -1,0 +1,209 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* background-color: #D04945; follower */
+	/* background-color: #da9100; subscriber */
+	/* background-color: #49A37F; donate */
+	/* background-color: #60A0F7; chear */
+	/* background-color: #9D27AD; raid */
+}
+
+.main {
+    position: relative;
+    width: 470px;
+    /* height: 400px; */
+    height: 260px;
+    display: flex;
+    padding: 10px 0 0 10px;
+    overflow: hidden;
+}
+
+.moon-container {
+    position: relative;
+    z-index: 1;
+}
+
+.moon {
+	width: 210px;
+	height: 210px;
+	border-radius: 50%;
+	background-color: #ffffff;
+	z-index: -2;
+	box-shadow: inset -15px -15px 0px 0px #d2d3d5;
+    filter: drop-shadow(0 0 2px #656566);
+}
+
+span {
+	display: block;
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background-color: #d2d3d5;
+	box-shadow: inset 1px 1px 0px 0px #bebfc1;
+	border: 1px solid white;
+    visibility: hidden;
+}
+
+span:nth-child(1) {
+	bottom: 130px;
+	right: 76px;
+	width: 30px;
+	height: 30px;
+	box-shadow: inset 2px 4px 0px 0px #bebfc1;
+	border: 2px solid white;
+    visibility: visible;
+}
+
+span:nth-child(6) {
+	top: 47px;
+	right: 26px;
+	width: 18px;
+	height: 18px;
+    visibility: visible;
+}
+
+span:nth-child(7) {
+	top: 30px;
+	left: 51px;
+	width: 18px;
+	height: 18px;
+    visibility: visible;
+}
+
+span:nth-child(8) {
+	top: 62px;
+	left: 18px;
+	width: 9px;
+	height: 9px;
+    visibility: visible;
+}
+
+span:nth-child(9) {
+	top: 85px;
+	left: 65px;
+	width: 11px;
+	height: 11px;
+    visibility: visible;
+}
+
+span:nth-child(10) {
+	top: 110px;
+	left: 35px;
+	width: 12px;
+	height: 12px;
+    visibility: visible;
+}
+
+span:nth-child(11) {
+	top: 110px;
+	left: 125px;
+	width: 32px;
+	height: 32px;
+    visibility: visible;
+}
+
+span:nth-child(12) {
+	top: 140px;
+	left: 60px;
+	width: 22px;
+	height: 22px;
+    visibility: visible;
+}
+
+span:nth-child(13) {
+	top: 100px;
+	left: 26px;
+	width: 4px;
+	height: 4px;
+    visibility: visible;
+}
+
+/* C L O U D */
+/* @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+} */
+
+.cloud-absolute {
+    /* position: absolute;
+    top: 0px;
+    left: 0px; */
+}
+
+.cloud-container {
+    width: 404px;
+    height: 200px;
+    position: absolute;
+    top: 55px;
+    right: 20px;
+    z-index: 2;
+
+    /* Анімація руху */
+    /* opacity: 1;
+    animation: moveCloud 3s ease-in-out forwards;
+    animation-delay: 2s; */
+}
+
+/* Анімація руху хмари */
+@keyframes moveCloud {
+    0% {
+        transform: translateX(910px);
+    }
+    100% {
+        transform: translateX(465px);
+    }
+}
+
+/* .cloud-container {
+    width: 404px;
+    height: 200px;
+    position: relative;
+    z-index: 2;
+
+    
+    opacity: 0;
+    animation: fadeIn 3s ease-in forwards;
+    animation-delay: 2s;
+}  */
+
+.cloud { 
+    background: #e0e2e4;
+    border-radius: 100px;
+    box-shadow: 10px 10px rgb(73, 163, 127);
+    height: 120px;
+    margin-top: 70px;
+    position: absolute;
+    width: 410px;
+    filter: saturate(3);
+}
+
+.cloud::after, .cloud::before {
+    background: inherit;
+    border-radius: inherit;
+    content: "";
+    display: inline-block;
+    position: relative;
+}
+  
+.cloud::after {
+    height: 120px;
+    left: -100px;
+    top: -90px;
+    width: 210px;
+}
+  
+.cloud::before {
+    height: 180px;
+    left: 130px;
+    top: -70px;
+    width: 190px;
+}
